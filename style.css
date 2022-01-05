@@ -1,0 +1,112 @@
+:root {
+  --wine-red: #c7375f;
+  --bright-red: #d42d2f;
+  --dark-green: #344d2f;
+  --light-green: #77a047;
+  --gold: #fac57d;
+  --snow: #f0f4f7;
+  --black: #000000;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: var(--snow);
+  background: var(--bright-red) url("images/christmas-shopping.jpg") center
+    no-repeat;
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
+}
+
+.checklist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 170px;
+  min-height: 400px;
+  max-width: 5ch;
+  background: var(--snow);
+  color: var(--dark-green);
+  font-family: "Satisfy", cursive;
+  font-size: 1.4rem;
+  padding: 0.5em 1.55em;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  position: relative;
+}
+
+.checklist-item {
+  margin: 0.5em;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+}
+
+input[type="checkbox"]:checked + label.strikethrough {
+  text-decoration: line-through;
+  font-weight: normal;
+}
+
+h1 {
+  font-family: "Satisfy", cursive;
+  font-size: 2rem;
+  position: absolute;
+  top: 2%;
+  padding: 0 1em;
+}
+
+.input-container {
+  display: flex;
+}
+
+#form {
+  margin-top: 5px;
+}
+
+#form input {
+  padding: 0.5em;
+  width: 93%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.btn {
+  color: var(--snow);
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  padding: 0.5em 2.15em;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+#btnAdd {
+  background-color: var(--dark-green);
+}
+
+#btnDel {
+  background-color: var(--wine-red);
+}
+
+#btnAdd:hover,
+#btnAdd:focus {
+  background-color: var(--light-green);
+}
+
+#btnDel:hover,
+#btnDel:focus {
+  background-color: var(--bright-red);
+}
